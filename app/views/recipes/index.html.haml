@@ -1,1 +1,10 @@
-%h1 This is the place holder for the Recipes#Index
+- @recipe.each_slice(3) do |recipes|
+  .row
+    - recipes.each do |redipe|
+      .col-md-4
+        .recipe
+          .image_wrapper
+            =link_to recipe do
+              = image_tag recipe.image.url(:medium)
+          %h2= link_to recipe.title, recipe
+  
