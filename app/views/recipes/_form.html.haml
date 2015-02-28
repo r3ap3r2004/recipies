@@ -18,7 +18,7 @@
         #ingredients
           = f.simple_fields_for :ingredients do |ingredient|
             = render 'ingredients_fields', f: ingredient
-          .link
+          .links
             = link_to_add_association 'Add Ingredient', f, :ingredients, class: "btn btn-default add-button"
 
       .col-md-6

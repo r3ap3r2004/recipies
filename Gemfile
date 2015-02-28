@@ -25,6 +25,7 @@ gem 'simple_form', '~> 3.0.2'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'paperclip', '~> 4.2.0'
 gem 'cocoon', '~> 1.2.6'
+gem 'devise', '~> 3.3.0'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
