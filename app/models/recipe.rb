@@ -5,11 +5,13 @@ class Recipe < ActiveRecord::Base
 	has_many :directions
 
 	accepts_nested_attributes_for :ingredients
-								   reject_if: proc { |attributes| attributes['name'].blank? },
+								   reject_if:proc { |attributes| attributes['name'].blank? },
 								   allows_destroy: true
+			
 	accepts_nested_attributes_for :directions
-								   reject_if: proc { |attributes| attributes['step'].blank? },
+								   reject_if:proc { |attributes| attributes['step'].blank? },
 								   allows_destroy: true	
+								end
 
 	validates :title, :description, :image, :presense: true	
 
