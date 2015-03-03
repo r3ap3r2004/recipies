@@ -11,7 +11,7 @@ class Recipe < ActiveRecord::Base
   accepts_nested_attributes_for :directions
   reject_if:proc { |attributes| attributes['step'].blank? },
   allows_destroy: true	
-
+  
   validates :title, :description, :image, :presense: true	
 
   has_attached_file :image, styles: { :medium => "400x400#" }
